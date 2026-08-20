@@ -1,0 +1,16 @@
+[Unit]
+Description=AIAsk 知识库网页问答服务 (Streamlit)
+# Ollama 跑在 Docker 容器里(由 1Panel/docker 管理),不是宿主机的 systemd 服务,
+# 所以这里只依赖 network,不依赖 ollama.service(host 上并不存在这个 unit)。
+After=network.target docker.service
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__PROJECT_DIR__/scripts
+ExecStart=__VENV_DIR__/bin/streamlit run app.py --server.address 0.0.0.0 --server.headless true
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

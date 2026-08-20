@@ -1,0 +1,8 @@
+[Unit]
+Description=AIAsk 知识库缓存清理
+
+[Service]
+Type=oneshot
+User=__USER__
+WorkingDirectory=__PROJECT_DIR__
+ExecStart=/bin/bash __PROJECT_DIR__/scripts/cleanup.sh

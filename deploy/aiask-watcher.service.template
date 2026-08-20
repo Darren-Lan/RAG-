@@ -1,0 +1,18 @@
+[Unit]
+Description=AIAsk Document Watcher - auto index new files
+After=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__PROJECT_DIR__
+Environment="PATH=__VENV_DIR__/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+Environment="OLLAMA_HOST=http://localhost:11434"
+ExecStart=__VENV_DIR__/bin/python __PROJECT_DIR__/scripts/watch_docs.py
+Restart=always
+RestartSec=15
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=每天定时运行 AIAsk 缓存清理
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

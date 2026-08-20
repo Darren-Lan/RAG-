@@ -1,0 +1,10 @@
+llama-index
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+llama-index-vector-stores-chroma
+chromadb
+streamlit
+
+# PDF/Word 等文档解析可能用到的额外依赖(SimpleDirectoryReader 会按需调用)
+pypdf
+python-docx

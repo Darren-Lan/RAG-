@@ -1,0 +1,10 @@
+==== 缓存清理开始 Thu Aug 20 03:00:01 AM CST 2026 ====
+>> 清理超过 30 天的问答日志...
+>> 清理 HuggingFace 缓存中的临时/不完整文件...
+>> 清理 __pycache__ ...
+>> 当前项目磁盘占用:
+36K	/data/aiask/docs
+128M	/data/aiask/chroma_db
+12K	/data/aiask/logs
+4.0K	/data/aiask/models
+==== 缓存清理完成 Thu Aug 20 03:00:02 AM CST 2026 ====
